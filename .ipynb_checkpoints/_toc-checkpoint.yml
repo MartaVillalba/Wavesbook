@@ -1,0 +1,65 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: contents/index
+parts:
+  - caption: 
+    chapters:
+    - file: DevGuide.md
+  - caption: A. Wave Analysis
+    chapters:
+    - file: contents/A1_observations.ipynb
+      sections:
+      - file: waves-main/ipynb/A_WaveAnalysis/A1_Observations/MajuroAtoll.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A1_Observations/BilbaoExt.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A1_Observations/Terschelling.ipynb
+    - file: contents/A2_spectral_analysis.ipynb
+      sections:
+      - file: waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/Pierson_Moskovitz_Spectra.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/JonswapSpectra.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/DirectionalSpectra.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/WaterLevel_from_Spectra.ipynb
+      - file: waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/FreeSurface_from_DirectionalSpectra.ipynb
+    - file: contents/A3_short-term_statistics.ipynb
+      #sections:
+      #- file:
+    - file: contents/A4_wave_generation.ipynb
+      sections:
+      - file: waves-main/ipynb/A_WaveAnalysis/A4_Wave_Generation/NomogramSPM.ipynb
+  - caption: B. Wave transformation
+    chapters:
+    - file: contents/B1_water_wave_mechanics.ipynb
+      sections:
+      - file: waves-main/ipynb/B_WaveTransformation/B1_Water_Wave_Mechanics/Potencial.ipynb
+      - file: waves-main/ipynb/B_WaveTransformation/B1_Water_Wave_Mechanics/Stationary_Wave.ipynb
+    - file: contents/B2_monochromatic_wave_transformation.ipynb
+      sections:
+      - file: waves-main/ipynb/B_WaveTransformation/B2_Monochromatic_Wave_Transformation/DifraccionOblicua.ipynb
+      - file: waves-main/ipynb/B_WaveTransformation/B2_Monochromatic_Wave_Transformation/K_dique.ipynb
+    - file: contents/B3_random_wave_transformation.ipynb
+      #sections:
+      #- file:
+  - caption: C. Long Waves
+    chapters:
+    - file: contents/C1_surf_zone_hydrodynamics.ipynb
+      #sections:
+      #- file: 
+    - file: contents/C2_long_waves.ipynb
+      #sections:
+      #- file: 
+    - file: contents/C3_total_water_level.ipynb
+      #sections:
+      #- file: 
+  - caption: D. Forecast and Hindcast
+    chapters:
+    - file: contents/D1_atmospheric_forcings.ipynb
+      #sections:
+      #- file: 
+    - file: contents/D2_forecast.ipynb
+      #sections:
+      #- file: 
+    - file: contents/D3_hindcast.ipynb
+      #sections:
+      #- file: 
+    - file: contents/D4_tropical_cyclones.ipynb

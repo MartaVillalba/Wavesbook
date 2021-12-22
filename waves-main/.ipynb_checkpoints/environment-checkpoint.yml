@@ -1,0 +1,20 @@
+name: waves
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - python=3.7
+    - scipy
+    - matplotlib
+    - netCDF4
+    - notebook
+    - numpy
+    - pandas
+    - panel
+    - progressbar
+    - plotly
+    - xarray
+    - gsw
+    - sympy
+    - jupyterlab
+    - jupyter-book

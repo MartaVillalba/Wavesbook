@@ -1,0 +1,16 @@
+jupyter-book
+ghp-import
+sphinx-thebe
+pandas
+plotly
+scipy
+matplotlib
+netCDF4
+notebook
+numpy
+panel
+progressbar
+plotly
+xarray
+gsw
+sympy

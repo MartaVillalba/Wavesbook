@@ -1,0 +1,92 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Panel</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/@holoviz/panel@0.12.4/dist/panel.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="20cf88a2-da7c-4cce-abe3-cb65bf84fefb" data-root-id="2920"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2945">
+          {"89b6a4fc-626a-4d3c-be15-086e333f83c2":{"defs":[{"extends":null,"module":null,"name":"ReactiveHTML1","overrides":[],"properties":[]},{"extends":null,"module":null,"name":"FlexBox1","overrides":[],"properties":[{"default":"flex-start","kind":null,"name":"align_content"},{"default":"flex-start","kind":null,"name":"align_items"},{"default":"row","kind":null,"name":"flex_direction"},{"default":"wrap","kind":null,"name":"flex_wrap"},{"default":"flex-start","kind":null,"name":"justify_content"}]},{"extends":null,"module":null,"name":"TemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]},{"extends":null,"module":null,"name":"MaterialTemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]}],"roots":{"references":[{"attributes":{"children":[{"id":"2927"}],"margin":[0,0,0,0],"name":"Row00294"},"id":"2926","type":"Row"},{"attributes":{"args":{"source":{"id":"2932"},"target":{"id":"2931"}},"code":"\n    var labels = ['Hs: &lt;b&gt;0&lt;/b&gt;', 'Hs: &lt;b&gt;5&lt;/b&gt;', 'Hs: &lt;b&gt;10&lt;/b&gt;']\n    target.text = labels[source.value]\n    "},"id":"2933","type":"CustomJS"},{"attributes":{"children":[{"id":"2928"}],"margin":[0,0,0,0],"name":"Row00282"},"id":"2927","type":"Row"},{"attributes":{"code":"\nvar state = null\nfor (var root of cb_obj.document.roots()) {\n  if (root.id == '2929') {\n    state = root;\n    break;\n  }\n}\nif (!state) { return; }\nstate.set_state(cb_obj, cb_obj.value)\n"},"id":"2939","type":"CustomJS"},{"attributes":{"end":2,"js_property_callbacks":{"change:value":[{"id":"2933"},{"id":"2934"}]},"margin":[0,10,5,10],"show_value":false,"start":0,"tooltips":false,"value":0},"id":"2932","type":"Slider"},{"attributes":{"children":[{"id":"2930"},{"id":"2935"},{"id":"2940"}],"margin":[0,0,0,0],"name":"Column00293"},"id":"2922","type":"Column"},{"attributes":{"args":{"source":{"id":"2937"},"target":{"id":"2936"}},"code":"\n    var labels = ['Tp: &lt;b&gt;0&lt;/b&gt;', 'Tp: &lt;b&gt;12&lt;/b&gt;', 'Tp: &lt;b&gt;24&lt;/b&gt;', 'Tp: &lt;b&gt;36&lt;/b&gt;']\n    target.text = labels[source.value]\n    "},"id":"2938","type":"CustomJS"},{"attributes":{"code":"\nvar state = null\nfor (var root of cb_obj.document.roots()) {\n  if (root.id == '2929') {\n    state = root;\n    break;\n  }\n}\nif (!state) { return; }\nstate.set_state(cb_obj, cb_obj.value)\n"},"id":"2944","type":"CustomJS"},{"attributes":{"args":{"source":{"id":"2942"},"target":{"id":"2941"}},"code":"\n    var labels = ['gamma: &lt;b&gt;1&lt;/b&gt;', 'gamma: &lt;b&gt;10&lt;/b&gt;', 'gamma: &lt;b&gt;19&lt;/b&gt;', 'gamma: &lt;b&gt;28&lt;/b&gt;']\n    target.text = labels[source.value]\n    "},"id":"2943","type":"CustomJS"},{"attributes":{"children":[{"id":"2921"},{"id":"2922"},{"id":"2926"}],"margin":[0,0,0,0],"name":"Column00297","tags":["embedded"]},"id":"2920","type":"Column"},{"attributes":{"margin":[5,0,0,10],"name":"","style":{"white-space":"nowrap"},"text":"gamma: &lt;b&gt;1&lt;/b&gt;"},"id":"2941","type":"Div"},{"attributes":{"end":3,"js_property_callbacks":{"change:value":[{"id":"2943"},{"id":"2944"}]},"margin":[0,10,5,10],"show_value":false,"start":0,"tooltips":false,"value":0},"id":"2942","type":"Slider"},{"attributes":{"margin":[5,5,5,5],"name":"interactive00275"},"id":"2928","type":"panel.models.markup.HTML"},{"attributes":{"margin":[5,0,0,10],"name":"","style":{"white-space":"nowrap"},"text":"Hs: &lt;b&gt;0&lt;/b&gt;"},"id":"2931","type":"Div"},{"attributes":{"children":[{"id":"2936"},{"id":"2937"}],"margin":[0,0,0,0],"name":"Column00312"},"id":"2935","type":"Column"},{"attributes":{"end":3,"js_property_callbacks":{"change:value":[{"id":"2938"},{"id":"2939"}]},"margin":[0,10,5,10],"show_value":false,"start":0,"tooltips":false,"value":0},"id":"2937","type":"Slider"},{"attributes":{"margin":[5,0,0,10],"name":"","style":{"white-space":"nowrap"},"text":"Tp: &lt;b&gt;0&lt;/b&gt;"},"id":"2936","type":"Div"},{"attributes":{"children":[{"id":"2941"},{"id":"2942"}],"margin":[0,0,0,0],"name":"Column00320"},"id":"2940","type":"Column"},{"attributes":{"children":[{"id":"2931"},{"id":"2932"}],"margin":[0,0,0,0],"name":"Column00304"},"id":"2930","type":"Column"},{"attributes":{"css_classes":["markdown"],"margin":[5,5,5,5],"name":"Markdown00295","text":"&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;3D PLOT - Custom Directional spectrum from Hs, Tp, and gamma parameters&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;"},"id":"2921","type":"panel.models.markup.HTML"},{"attributes":{"code":"\nvar state = null\nfor (var root of cb_obj.document.roots()) {\n  if (root.id == '2929') {\n    state = root;\n    break;\n  }\n}\nif (!state) { return; }\nstate.set_state(cb_obj, cb_obj.value)\n"},"id":"2934","type":"CustomJS"}],"root_ids":["2920"]},"title":"Bokeh Application","version":"2.4.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('2945').textContent;
+                  const render_items = [{"docid":"89b6a4fc-626a-4d3c-be15-086e333f83c2","root_ids":["2920"],"roots":{"2920":"20cf88a2-da7c-4cce-abe3-cb65bf84fefb"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

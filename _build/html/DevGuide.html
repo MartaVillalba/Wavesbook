@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer guide &#8212; Waves Book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/thebelab-helper.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="A.1 Observations" href="contents/A1_observations.html" />
+    <link rel="prev" title="Introduction" href="contents/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logoUC.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Waves Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/index.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Developer guide
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  A. Wave Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contents/A1_observations.html">
+   A.1 Observations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A1_Observations/MajuroAtoll.html">
+     Majuro Atoll (Republic of the Marshall Islands)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A1_Observations/BilbaoExt.html">
+     Bilbao Exterior Buoy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A1_Observations/Terschelling.html">
+     Terschelling (Netherlands)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contents/A2_spectral_analysis.html">
+   A.2 Spectral Analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/Pierson_Moskovitz_Spectra.html">
+     Pierson and Moskowitz (1964), OTD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/JonswapSpectra.html">
+     Jonswap Spectra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/DirectionalSpectra.html">
+     Directional Spectra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/WaterLevel_from_Spectra.html">
+     Water level from Spectra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A2_Spectral_Analysis/FreeSurface_from_DirectionalSpectra.html">
+     Free Surface from Directional Spectra
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/A3_short-term_statistics.html">
+   A.3 Short-term statistics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contents/A4_wave_generation.html">
+   A.4 Wave Generation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/A_WaveAnalysis/A4_Wave_Generation/NomogramSPM.html">
+     Nomogram Shore Protection Manual - SPM
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  B. Wave transformation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contents/B1_water_wave_mechanics.html">
+   B.1 Water Wave Mechanics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/B_WaveTransformation/B1_Water_Wave_Mechanics/Potencial.html">
+     Potential equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/B_WaveTransformation/B1_Water_Wave_Mechanics/Stationary_Wave.html">
+     Stationary waves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contents/B2_monochromatic_wave_transformation.html">
+   B.2 Monochromatic Wave Transformation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/B_WaveTransformation/B2_Monochromatic_Wave_Transformation/DifraccionOblicua.html">
+     Ecuación de la Difracción Oblicua
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waves-main/ipynb/B_WaveTransformation/B2_Monochromatic_Wave_Transformation/K_dique.html">
+     Coeficientes de difracción, refracción y asomeramiento
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/B3_random_wave_transformation.html">
+   B.3 Random Wave Transformation
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  C. Long Waves
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/C1_surf_zone_hydrodynamics.html">
+   C.1 Surf Zone Hydrodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/C2_long_waves.html">
+   C.2 Long Waves
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/C3_total_water_level.html">
+   C.3 Total Water Level
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  D. Forecast and Hindcast
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/D1_atmospheric_forcings.html">
+   D.1 Atmospheric Forcings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/D2_forecast.html">
+   D.2 Forecast
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/D3_hindcast.html">
+   D.3 Hindcast
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents/D4_tropical_cyclones.html">
+   D.4 Tropical Cyclones
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/DevGuide.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/MartaVillalba/Wavesbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Developer guide
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-and-update-a-book-using-jupyter-book">
+     Create and update a book using Jupyter Book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upload-the-book-to-a-repository">
+     Upload the book to a repository
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-web-page-for-the-book">
+     Create a web page for the book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upload-the-book-to-gitlab">
+     Upload the book to GitLab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-waves-book">
+   About Waves Book
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-new-pdf-to-the-book">
+     Add a new PDF to the book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-new-youtube-video-to-the-book">
+     Add a new YouTube video to the book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-new-section-to-the-book">
+     Add a new section to the book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-topics">
+   Advanced topics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-the-book-features">
+     Configure the book features
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#make-the-book-executable-with-binder-and-thebe">
+     Make the book executable with Binder and Thebe
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interactive-plots-and-contents">
+     Interactive plots and contents
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-binder-computing-interface">
+     Custom Binder computing interface
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="developer-guide">
+<h1>Developer guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-and-update-a-book-using-jupyter-book">
+<h2>Create and update a book using Jupyter Book<a class="headerlink" href="#create-and-update-a-book-using-jupyter-book" title="Permalink to this headline">¶</a></h2>
+<p>The following sources will be useful:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubc-dsci.github.io/jupyterdays/sessions/beuzen/jupyter_book_tutorial.html">Starter tutorial</a>.</p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book docs</a>.</p></li>
+</ul>
+<p>Once you have created a Jupyter Book, everytime you make some changes on it you have to compile the whole book using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>This is the basic command you should always remember. After this, the HTML files of your book will be updated and you will be able to check the book locally.</p>
+</div>
+<div class="section" id="upload-the-book-to-a-repository">
+<h2>Upload the book to a repository<a class="headerlink" href="#upload-the-book-to-a-repository" title="Permalink to this headline">¶</a></h2>
+<p>Some Jupyter Book features, such as Binder or Thebe, are available only if your book is hosted in a GitHub repository. By now, it can’t be done with a GitLab repository, but that may change in the future.</p>
+<p>GitHub allows you to upload files up to 100 MB to a repository. If there are larger files in your book (believe me, there will be), you must upload them using Git LFS. You should follow these steps:</p>
+<p>1- Download Git LFS from <a class="reference external" href="https://git-lfs.github.com/">https://git-lfs.github.com/</a> and install it on your Jupyter Book directory using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">lfs</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>This only needs to be done the first time you use Git LFS.</p>
+<p>2- Add and commit changes the way you usually do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;add large files&quot;</span>
+</pre></div>
+</div>
+<p>3- Import large files. This will create a <code class="docutils literal notranslate"><span class="pre">.gitattributes</span></code> file with all the references to archives above 100 MB.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">lfs</span> <span class="n">migrate</span> <span class="kn">import</span> <span class="o">--</span><span class="n">above</span><span class="o">=</span><span class="s2">&quot;100 MB&quot;</span>
+</pre></div>
+</div>
+<p>4- You can check the status of the large files with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">lfs</span> <span class="n">migrate</span> <span class="n">info</span>
+</pre></div>
+</div>
+<p>5- Push LFS files to your repository (for example, the one you have called <code class="docutils literal notranslate"><span class="pre">origin</span></code> with branch <code class="docutils literal notranslate"><span class="pre">main</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">lfs</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>6- Push changes the way you usually do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p><strong>Warning</strong>: Git LFS doesn’t support SSH keys. I recommend you to add your remote repository using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">MartaVillalba</span><span class="o">/</span><span class="n">Wavesbook</span>
+</pre></div>
+</div>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">git&#64;github.com:MartaVillalba/Wavesbook.git</span></code> instead of your repository URL, Git LFS won’t work.</p>
+</div>
+<div class="section" id="create-a-web-page-for-the-book">
+<h2>Create a web page for the book<a class="headerlink" href="#create-a-web-page-for-the-book" title="Permalink to this headline">¶</a></h2>
+<p>After the previous steps, the book will be available in your GitHub repository. However, in order to make it visible as a web page with an URL, you have to use <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code>. You only need to follow three steps:</p>
+<p>1- To use <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> for the first time, you have to install it in your conda environment using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+<p>2- Everytime you push your book to your remote repository, run this command too:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="o">./</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>3- In your GitHub repository, go to Settings &gt; Pages and, if everything went right, the URL of your book should be available there. For example, mine is <a class="reference external" href="https://martavillalba.github.io/Wavesbook/">https://martavillalba.github.io/Wavesbook/</a>.</p>
+<p><strong>Warning</strong>: <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> will automatically push the HTML files of your book to your <code class="docutils literal notranslate"><span class="pre">origin</span></code> repository. You should add it to your remote repositories like <code class="docutils literal notranslate"><span class="pre">origin</span> <span class="pre">https://github.com/MartaVillalba/Wavesbook</span></code>.</p>
+<p><strong>Note 1</strong>: this process can be automated following the instructions <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions">here</a>.</p>
+<p><strong>Note 2</strong>: it is also possible to create the book web page in GitLab. However, it is more complex and the book will always need to be hosted in GitHub, so I find it more simple if the pages are also created in GitHub.</p>
+</div>
+<div class="section" id="upload-the-book-to-gitlab">
+<h2>Upload the book to GitLab<a class="headerlink" href="#upload-the-book-to-gitlab" title="Permalink to this headline">¶</a></h2>
+<p>If you want to have the book hosted in GitLab aside from GitHub, you can easily achieve that with the “mirror” option.</p>
+<p>1- Create an empty repository in GitLab: New project/repository &gt; Create blank project. Make it public and do not initialize it with a README.</p>
+<p>2- Once you have created your GitLab repository, go to Settings &gt; Repository &gt; Mirroring repositories. There, put your GitHub repository URL (for example, mine is <a class="reference external" href="https://github.com/MartaVillalba/Wavesbook">https://github.com/MartaVillalba/Wavesbook</a>) and select the option Pull. After you enter your Password, your GitLab repository will start to import all branches and files from your GitHub repository, and will be updated everytime you push changes to the GitHub repository.</p>
+<p><strong>Warning</strong>: remember that upload the book to GitLab is necessary only if you want to have it there along with the rest of your projects. The important repository is the GitHub one, because it is the one that hosts the book web page and is connected to Binder.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="about-waves-book">
+<h1>About Waves Book<a class="headerlink" href="#about-waves-book" title="Permalink to this headline">¶</a></h1>
+<p>Waves Book directory is divided into several folders and files:</p>
+<ul class="simple">
+<li><p><strong>waves-main</strong>: this folder contains all the code notebooks (ipynb), data used in them (data) and custom libraries (lib).</p></li>
+<li><p><strong>contents</strong>: here are located the notebooks with PDFs, videos and other materials for the course. There is one notebook for each subsection of the book, though some of them are still empty.</p></li>
+<li><p><strong>_build</strong>: this is where all HTML files of the book are builded. It is automatically updated each time you build the book with the command <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>, but in some cases you will need to add some files to this folder manually as I explain in the following sections.</p></li>
+<li><p><strong>_config_yml</strong>: this file contains the main configuration of the book (for example, title, logo, repository URL, Binder and Thebe options…).</p></li>
+<li><p><strong>_toc.yml</strong>: this is the index of contents of the book. It is structured in chapters, sections and files. New contents for the book (notebooks or markdown) need to be added here with their complete path.</p></li>
+<li><p><strong>.binder</strong> and <strong>requirements.txt</strong>: this is necessary for Binder to build the environment of the book correctly. New libraries have to be added to <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.</p></li>
+<li><p><strong>.gitattributes</strong>: it is created automatically by Git LFS when you import large files, as it is described in <em>Upload the book to a repository</em> section.</p></li>
+<li><p><strong>gitlab-ci.yml</strong>: this file is meant for building the book web page via GitLab. However, it is not necessary unless you want to host the web page in GitLab instead of GitHub.</p></li>
+</ul>
+<p>In the following descriptions, some procedures to add new content to the book and their peculiarities are described.</p>
+<div class="section" id="add-a-new-pdf-to-the-book">
+<h2>Add a new PDF to the book<a class="headerlink" href="#add-a-new-pdf-to-the-book" title="Permalink to this headline">¶</a></h2>
+<p>PDFs need to be added to Waves Book in a notebook. In order to achieve that, follow these steps:</p>
+<p>1- Go to <em>contents</em> folder and search the notebook of the section where the PDF will go. For example, <code class="docutils literal notranslate"><span class="pre">A1_observations.ipynb</span></code>.</p>
+<p>2- Open the notebook and add a markdown cell and a code cell at the end of it. In the markdown one, write the title of the subsection where the PDF will go. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## New PDF</span>
+</pre></div>
+</div>
+<p>In the code one, write the following</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;../contents/PDF_NAME.pdf&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">PDF_NAME</span></code> is the name of the PDF you want to add. Note that the PDF must be inside folder <em>contents</em>.</p>
+<p>3- (Optional) Hide the code input in order to keep the book clean and simple. This can be done in JupyterLab by clicking <em>Property Inspector</em> (in the upper right corner) when you are in a code cell and adding a new Cell-Tag called <code class="docutils literal notranslate"><span class="pre">hide-input</span></code>.</p>
+<p>4- Now the PDF is correctly added to one of the notebooks of Waves Book. However, the PDF also needs to be in the folder where HTML contents of the book are located (i.e. <em>_build</em> folder). This step is so important, and if you don’t do it the PDF will not be available in the book interface. You only have to go to <em>_build</em> &gt; <em>html</em> &gt; <em>contents</em> and paste the PDF there.</p>
+<p><strong>Warning</strong>: if you have the PDF located inside other folder and not in the <em>contents</em> one, you have to copy the PDF to the corresponding folder in <em>_build</em> path.</p>
+<p>5- Compile the whole book using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>in the command line.</p>
+<p>6- Follow the steps in <em>Upload the book to a repository</em> and <em>Create a web page for the book</em> to update your repository and the book web page with the new PDF.</p>
+</div>
+<div class="section" id="add-a-new-youtube-video-to-the-book">
+<h2>Add a new YouTube video to the book<a class="headerlink" href="#add-a-new-youtube-video-to-the-book" title="Permalink to this headline">¶</a></h2>
+<p>The steps to add new videos to Waves Book are quite similar to those described in <em>Add a new PDF to the book</em>, but more simple:</p>
+<p>1-  Go to <em>contents</em> folder and search the notebook of the section where the PDF will go. For example, <code class="docutils literal notranslate"><span class="pre">A1_observations.ipynb</span></code>.</p>
+<p>2- Open the notebook and add a markdown cell and a code cell at the end of it. In the markdown one, write the title of the subsection where the video will go. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## New YouTube video</span>
+</pre></div>
+</div>
+<p>In the code one, write the following</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;VIDEO_CODE&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">VIDEO_CODE</span></code> is the link of the video you want to add. For example, if you want to add the video with URL <a class="reference external" href="https://www.youtube.com/watch?v=LW-mWSW9kkg">https://www.youtube.com/watch?v=LW-mWSW9kkg</a>, then <code class="docutils literal notranslate"><span class="pre">VIDEO_CODE</span> <span class="pre">=</span> <span class="pre">LW-mWSW9kkg</span></code>.</p>
+<p>3- (Optional) Hide the code input in order to keep the book clean and simple. This can be done in JupyterLab by clicking <em>Property Inspector</em> (in the upper right corner) when you are in a code cell and adding a new Cell-Tag called <code class="docutils literal notranslate"><span class="pre">hide-input</span></code>.</p>
+<p>4- Compile the whole book using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>in the command line.</p>
+<p>5- Follow the steps in <em>Upload the book to a repository</em> and <em>Create a web page for the book</em> to update your repository and the book web page with the new YouTube video.</p>
+</div>
+<div class="section" id="add-a-new-section-to-the-book">
+<h2>Add a new section to the book<a class="headerlink" href="#add-a-new-section-to-the-book" title="Permalink to this headline">¶</a></h2>
+<p>The index of contents of the book is located in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. Open it with a text editor or in Jupyter Lab to modify the sections and files that are included in the book. You can add markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) or Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). When adding new sections, be careful with the structure of the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. If its structure is incorrect, the book won’t compile. You can find all the information about the book structure and index of contents <a class="reference external" href="https://jupyterbook.org/customize/toc.html">here</a>.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="advanced-topics">
+<h1>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h1>
+<p>By now, you have learned how to do the main actions in a Jupyter Book. However, there are many other features that can be added to a book and will make it more interactive and useful. In the following sections you can find the way to do so.</p>
+<div class="section" id="configure-the-book-features">
+<h2>Configure the book features<a class="headerlink" href="#configure-the-book-features" title="Permalink to this headline">¶</a></h2>
+<p>The file <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> is where you can choose all the features you want your book to have. <a class="reference external" href="https://jupyterbook.org/customize/config.html">Here</a> you can find all the information about the available book settings, but these are the more important ones:</p>
+<ul class="simple">
+<li><p><strong>Disable execution of notebooks</strong>. With the following code, you prevent your book from re-execute all the notebooks each time it is compiled:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">execute</span><span class="p">:</span>
+  <span class="n">execute_notebooks</span><span class="p">:</span> <span class="s1">&#39;off&#39;</span>
+</pre></div>
+</div>
+<p>This is specially important if your book has code that would take so much time to run.</p>
+<ul class="simple">
+<li><p><strong>Specify your GitHub repository where the book is hosted</strong>. For example, in my configuration it is:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repository</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">MartaVillalba</span><span class="o">/</span><span class="n">Wavesbook</span> <span class="c1"># Online location of your book</span>
+  <span class="n">branch</span><span class="p">:</span> <span class="n">main</span>  <span class="c1"># Which branch of the repository should be used when creating links (optional)</span>
+</pre></div>
+</div>
+<p>This is completely necessary if you want to add Binder to your book as I explain in the following section. Despite the book may be uploaded to GitHub and mirrored to GitLab at the same time, always use the GitHub URL in the book configuration.</p>
+<ul class="simple">
+<li><p><strong>Configure the book buttons</strong>. These buttons are located in the upper part of the book pages, and they allow you to go to the source repository of the book, Binder, Google Colab, JupyterHub or Thebe. Some of these features will be explained in more detail in the next section, but here is how the configuration of the buttons should look like:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="p">:</span>
+  <span class="n">use_repository_button</span><span class="p">:</span> <span class="n">true</span>
+  <span class="n">use_binder_button</span><span class="p">:</span> <span class="n">true</span>
+
+<span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">notebook_interface</span><span class="p">:</span> <span class="s2">&quot;classic&quot;</span>
+  <span class="n">binderhub_url</span><span class="p">:</span> <span class="s2">&quot;https://mybinder.org&quot;</span>
+  <span class="n">thebe</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-the-book-executable-with-binder-and-thebe">
+<h2>Make the book executable with Binder and Thebe<a class="headerlink" href="#make-the-book-executable-with-binder-and-thebe" title="Permalink to this headline">¶</a></h2>
+<p>When the book is hosted in a GitHub repository, you can connect it to a Binder environment that allows you to execute and modify all the notebooks of the book. <a class="reference external" href="https://jupyterbook.org/interactive/launchbuttons.html">Here</a> you can find how Binder and other interfaces can be added to the book, but these are the main requirements:</p>
+<ul class="simple">
+<li><p>The book must be hosted in a GitHub repository. By now, it can’t be done with a GitLab repository. Remember that you have to specify the repository URL in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file as it is described in the previous section:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">repository</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">MartaVillalba</span><span class="o">/</span><span class="n">Wavesbook</span> <span class="c1"># Online location of your book</span>
+  <span class="n">branch</span><span class="p">:</span> <span class="n">main</span>  <span class="c1"># Which branch of the repository should be used when creating links (optional)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Activate Binder button and URL in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> with</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html</span><span class="p">:</span>
+  <span class="n">use_binder_button</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">binderhub_url</span><span class="p">:</span> <span class="s2">&quot;https://mybinder.org&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">.binder</span></code> folder in the book with a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file with the following content:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">r</span> <span class="o">../</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>and then another <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in the root directory of the book with all the necessary libraries to build the Binder environment. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">sphinx</span><span class="o">-</span><span class="n">thebe</span>
+<span class="n">pandas</span>
+<span class="n">plotly</span>
+<span class="n">scipy</span>
+<span class="n">matplotlib</span>
+<span class="n">netCDF4</span>
+<span class="n">notebook</span>
+<span class="n">numpy</span>
+<span class="n">panel</span>
+<span class="n">progressbar</span>
+<span class="n">plotly</span>
+<span class="n">xarray</span>
+<span class="n">gsw</span>
+<span class="n">sympy</span>
+</pre></div>
+</div>
+<p>Once Binder is correctly added to the book, you can make it executable without leaving the book pages with Thebe. Note that Thebe is an experimental feature and may not work completely. <a class="reference external" href="https://jupyterbook.org/interactive/thebe.html">Here</a> and <a class="reference external" href="https://thebe.readthedocs.io/en/latest/">here</a> are the tutorial and documentation of Thebe. Once you have Binder in your book, you can activate Thebe by adding this to the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">thebe</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="p">:</span>
+  <span class="n">extra_extensions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">sphinx_thebe</span>
+    <span class="o">-</span> <span class="n">jupyter_sphinx</span>
+</pre></div>
+</div>
+<p>One important issue with Thebe that you have to take into account is that its directory is not the same as your computer. This means that, when you import some data in a notebook, the path you specify when working locally is not the same as the path that Thebe will need. For example, if you are working on a notebook located in <code class="docutils literal notranslate"><span class="pre">waves-main/ipynb/A_WaveAnalysis/A1_Observations</span></code> and data files are located in <code class="docutils literal notranslate"><span class="pre">waves-main/data/Bilbao</span></code>, in the notebook you would import the data using the path</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">p_data</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbao&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>That is, you start in the notebook folder and go back to enter the corresponding data folder. However, when executing the book with Thebe, the starting directory is not the notebook one, but the home one. If you start in home’s directory, the path to the data should be</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">p_data</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;waves-main&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbao&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>In other words, the variable <code class="docutils literal notranslate"><span class="pre">p_data</span></code> should contain different paths when working on the notebook locally (or in Binder) and when  executing the book with Thebe. This can be fixed by adding a conditional each time you import some data or a custom library in the notebook:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;waves-main&#39;</span><span class="p">)):</span> <span class="c1">#thebe</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;waves-main&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib.eta_spec</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># path to buoy data</span>
+<span class="k">if</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)):</span>
+    <span class="n">p_data</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbao&#39;</span><span class="p">))</span> <span class="c1"># thebe</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">p_data</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbao&#39;</span><span class="p">))</span> <span class="c1"># notebook</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interactive-plots-and-contents">
+<h2>Interactive plots and contents<a class="headerlink" href="#interactive-plots-and-contents" title="Permalink to this headline">¶</a></h2>
+<p>One of the main cons of Jupyter Book (and Jupyter environment in general) is that interactive plots may not work sometimes. In Waves Book, the interactivity is mainly achieved with Plotly and Panel. In this section, you can find a lot of information and useful links about the issues with interactive plots in Jupyter Book. <a class="reference external" href="https://jupyterbook.org/interactive/interactive.html">Here</a> it is the general Jupyter Book documentation about interactive plots.</p>
+<p><strong>Interactive plots with <a class="reference external" href="https://plotly.com/python/">Plotly</a>.</strong></p>
+<p>When you make a plot with Plotly in a Jupyter Notebook, you generally show it with <code class="docutils literal notranslate"><span class="pre">fig.show()</span></code> or directly with <code class="docutils literal notranslate"><span class="pre">fig</span></code>. However, the resulting plot may not be rendered correctly in Jupyter Book and won’t be visible in the final pages of the book. In order to solve this, you have to use another Plotly renderer instead of the default one. <a class="reference external" href="https://plotly.com/python/renderers/">Here</a> you can find the documentation about Plotly renderers.</p>
+<p>There are several solutions you can try to show Plotly figures in the book:</p>
+<p>1- Use <code class="docutils literal notranslate"><span class="pre">sphinx_gallery</span></code> renderer each time you show a plot:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;sphinx_gallery&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>2- Save the plot to a HTML file and then show it in the book:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;figure.html&quot;</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;figure.html&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>3- Change the default renderer to <code class="docutils literal notranslate"><span class="pre">iframe_connected</span></code> and then show the plots the way you usually do:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;iframe_connected&#39;</span>
+<span class="o">...</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This will also save the plot into a HTML file.</p>
+<p>Remember that if you use methods 2 or 3, you will need to copy-paste the resulting HTML plot into the corresponding <em>_build</em> folder as it is explained in <em>Add a new PDF to the book</em> section.</p>
+<p><strong>Interactive plots and widgets with <a class="reference external" href="https://panel.holoviz.org/user_guide/index.html">Panel</a>.</strong></p>
+<p>In Waves Book, Panel is used to make plots that can be modified with interactive widgets. This is an interaction between Python and JavaScript and needs a Python kernel running to upgrade the plot each time you change the value of a parameter with the widgets. This is the reason why it is so problematic to achieve this interaction in the final pages of the book, that are only HTML files with no Python kernel at all.</p>
+<p>An easy way to fix this is to go to Binder. If you click the Binder button when you are on a book page with a Panel interactive plot, you will go directly to the notebook and will be able to execute it and play with the Panel plot. However, this requires the user to leave the book interface and it is not what we are looking for. Also, if you try to re-run the Panel plots making the book content executable with Thebe, the interactivity will not work. This occurs because the interaction between the widgets and the plot requires recursive callbacks to the Python kernel, and Thebe’s kernel only runs when you execute one cell and stops immediately after that.</p>
+<p>If you want the user to interact with Panel plots without leaving the book, a temporary solution for this problem is to embed the Panel figures. <a class="reference external" href="https://panel.holoviz.org/user_guide/Deploy_and_Export.html#embedding">Here</a> you can read the documentation about Panel embedding. This action saves in memory or into a HTML file several figures with different configurations of the interactive parameters. However, this needs a lot of space and can’t be done in complex Panel plots. Also, the number of available values for the parameters of the widgets is reduced. This can be achieved in two ways:</p>
+<p>1- If the Panel plot is simple, you can plot and embed it directly with</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">panel</span><span class="o">.</span><span class="n">embed</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>2- If the Panel plot has more complexity, it is better to save it in a HTML file and then show that file with Python:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">panel</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;panel.html&quot;</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;panel.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In some cases, the plot is so complex that the resulting HTML file would be huge, and it would give trouble when uploading the book to a GitHub repository. Because of this, it is necessary to find another solution to this issue. Here are the possible ways to fix this in the future:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://plotly.com/python/sliders/">Plotly sliders</a>. Plotly library allows you to create interactive plots with widgets, and they can be easily shown in the book. However, this method may not be able to reproduce complex plots like the ones we have in Waves Book.</p></li>
+<li><p><a class="reference external" href="https://thebe.readthedocs.io/en/latest/examples/matplotlib_interact_example.html">Matplotlib + Ipywidgets with Thebe</a>. Once Thebe is activated in the book, this feature may allow the user to play with figures and widgets without leaving the book. This method would require to change the code and use Ipywidgets instead of Panel to create the interaction between the plot and the widgets.</p></li>
+<li><p><a class="reference external" href="https://executablebooks.org/en/latest/index.html">The Executable Book Project</a>. In this project, you may find more information about this issues with interactive plots in the future. Note that Jupyter Book is a recent tool that is under development, and it will continue growing up and having new features in the near future.</p></li>
+</ul>
+</div>
+<div class="section" id="custom-binder-computing-interface">
+<h2>Custom Binder computing interface<a class="headerlink" href="#custom-binder-computing-interface" title="Permalink to this headline">¶</a></h2>
+<p>Instead of using Binder to run the notebooks of Waves Book, it is possible to connect the book to a GeoOcean cluster. This feature still has a long way to go, but these are the steps to try it:</p>
+<p>1- Connect your computer to the cluster following these instructions (from GeoOcean Teams group &gt; NODOS channel):</p>
+<ul class="simple">
+<li><p>Login: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;tejo.unican.es</span></code></p></li>
+<li><p>Connect to a port: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8XXX:localhost:8XXX</span> <span class="pre">username&#64;tejo.unican.es</span></code> where <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> is the number of the ports that are being connected.</p></li>
+<li><p>Activate environment: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/software/geocean/conda/bin/activate</span></code></p></li>
+<li><p>Launch Jupyter: <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">--no-browser</span> <span class="pre">--port=8XXX</span></code></p></li>
+</ul>
+<p>It is so important that, after these steps, Jupyter launches in the same <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> port you have specified. If the port <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> is in use, Jupyter will lauch in the next available port and the number will change. You will see this message in the terminal: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">port</span> <span class="pre">8XXX</span> <span class="pre">is</span> <span class="pre">already</span> <span class="pre">in</span> <span class="pre">use,</span> <span class="pre">trying</span> <span class="pre">another</span> <span class="pre">port.</span></code>
+If this happens, end the session using Ctrl+C two times and then write <code class="docutils literal notranslate"><span class="pre">logout</span></code>, and try using another <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> port until you find one that is available at the moment.</p>
+<p>2- In <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file, change the Binder URL to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8XXX/tree</span></code>, so that <code class="docutils literal notranslate"><span class="pre">launch_buttons</span></code> section looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">notebook_interface</span><span class="p">:</span> <span class="s2">&quot;classic&quot;</span>
+  <span class="n">binderhub_url</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8XXX/tree&quot;</span>
+  <span class="n">thebe</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> has to be the number of the port you have achieved to connect to. Once you are done, compile the book using <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>.</p>
+<p>With the previous step, all the Binder buttons of the book will be automatically changed. This way, when you click “Binder” in the book’s interface, you will be redirected to a Jupyter session running in the cluster instead of Binder. However, Jupyter Book by default will create the Binder URL from your repository. That is, if in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file the Binder URL is <code class="docutils literal notranslate"><span class="pre">https://mybinder.org</span></code> and the GitHub URL is <code class="docutils literal notranslate"><span class="pre">https://github.com/MartaVillalba/Wavesbook</span></code>, when you click the Binder button Jupyter Book will redirect you to <code class="docutils literal notranslate"><span class="pre">https://mybinder.org/v2/gh/MartaVillalba/Wavesbook/main?urlpath=tree/waves-main/ipynb/A_WaveAnalysis/A1_Observations/MajuroAtoll.ipynb</span></code>. This means that it adds the fragment <code class="docutils literal notranslate"><span class="pre">/v2/gh/MartaVillalba/Wavesbook/main</span></code> corresponding to your repository before specifying the route of the notebook you want to run (<code class="docutils literal notranslate"><span class="pre">tree/waves-main/ipynb/A_WaveAnalysis/A1_Observations/MajuroAtoll.ipynb</span></code>). Because of this, you need to do an extra step to make it work when using the cluster URL <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8XXX/tree</span></code>:</p>
+<p>3- In Tejo’s directory, create the path <code class="docutils literal notranslate"><span class="pre">/v2/gh/MartaVillalba/Wavesbook/main</span></code> and copy there all the notebooks of Waves Book, that is:</p>
+<ul class="simple">
+<li><p>Create folder <code class="docutils literal notranslate"><span class="pre">v2</span></code> and move into it:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@tejo ~]$ mkdir v2
+[username@tejo ~]$ cd v2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Repeat with folder <code class="docutils literal notranslate"><span class="pre">gh</span></code>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@tejo v2]$ mkdir gh
+[username@tejo v2]$ cd gh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Repeat with folder <code class="docutils literal notranslate"><span class="pre">MartaVillalba</span></code>, which will be your username in GitHub:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@tejo gh]$ mkdir MartaVillalba
+[username@tejo gh]$ cd MartaVillalba
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Repeat with folder <code class="docutils literal notranslate"><span class="pre">Wavesbook</span></code>, which will be the repository where the book is hosted in GitHub:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@tejo MartaVillalba]$ mkdir Wavesbook
+[username@tejo MartaVillalba]$ cd Wavesbook
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Finally, repeat with folder <code class="docutils literal notranslate"><span class="pre">main</span></code>, which will be the branch name of your repository:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@tejo Wavesbook]$ mkdir main
+[username@tejo Wavesbook]$ cd main
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Once you are in <code class="docutils literal notranslate"><span class="pre">/v2/gh/MartaVillalba/Wavesbook/main</span></code> directory, copy-paste all the notebooks from the book that you want to run in the cluster. For example, with <code class="docutils literal notranslate"><span class="pre">BilbaoExt.ipynb</span></code>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="o">*</span><span class="n">YOUR</span> <span class="n">ROUTE</span> <span class="n">TO</span> <span class="n">THE</span> <span class="n">NOTEBOOK</span><span class="o">*</span> <span class="n">username</span><span class="nd">@tejo</span><span class="o">.</span><span class="n">unican</span><span class="o">.</span><span class="n">es</span><span class="p">:</span><span class="n">v2</span><span class="o">/</span><span class="n">gh</span><span class="o">/</span><span class="n">MartaVillalba</span><span class="o">/</span><span class="n">Wavesbook</span><span class="o">/</span><span class="n">main</span>
+</pre></div>
+</div>
+<p>In my case, the route to the notebook in my laptop is <code class="docutils literal notranslate"><span class="pre">c:\Users/Marta/Desktop/Beca/waves_book/waves-main/ipynb/A_WaveAnalysis/A1_Observations/BilbaoExt.ipynb</span></code>.</p>
+<p>After all these steps, you should be able to run the Waves Book notebooks in the cluster. You should note the following:</p>
+<ul class="simple">
+<li><p>You have to connect to the cluster each time you want to run the book on it. If the number of port <code class="docutils literal notranslate"><span class="pre">8XXX</span></code> changes between sessions, you have to change it in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file too.</p></li>
+<li><p>This feature has been tested when working with the book locally, but it may not work when you are seeing the book on its web page.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "MartaVillalba/Wavesbook",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="contents/index.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Introduction</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="contents/A1_observations.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">A.1 Observations</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By GeoOcean<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
